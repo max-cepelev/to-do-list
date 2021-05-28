@@ -1,0 +1,23 @@
+.list_item{
+    display: inline-block;
+    position: relative;
+}
+
+.list_item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: hsl(198, 1%, 29%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all linear .2s;
+}
+
+.list_item.active::after {
+    opacity: 1;
+    width: 100%;
+}
