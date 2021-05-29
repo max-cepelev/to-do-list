@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import './todoitem.css';
-function ToDoItem({text, onDelete, id}) {
+function ToDoItem({text, onDelete, id, number}) {
     const [isDone, setIsDone] = useState(false);
     const onClick = () => {
         setIsDone(!isDone);
@@ -8,7 +7,7 @@ function ToDoItem({text, onDelete, id}) {
     }
     return (
         <div onClick={onClick}>
-            <li className={isDone ? "list_item active": "list_item"}>{text}</li>
+            <li className={isDone ? "list_item active": "list_item"}>{number}. {text}</li>
         </div>
 
     )
