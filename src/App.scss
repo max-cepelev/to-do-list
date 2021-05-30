@@ -63,6 +63,7 @@
     display: inline-block;
     position: relative;
     padding: 0.2rem;
+    cursor: pointer;
     &:after {
       content: '';
       display: block;
